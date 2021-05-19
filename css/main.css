@@ -1,6 +1,10 @@
 :root {
     --main-color: #41C7FC;
     --bg-color: #1F2021;
+    --header-text-color: #353235;
+    --body-text-color: #A8A8A8;
+    --section-padding-top-sm: 64px;
+    --section-padding-top-lg: 96px; 
 }
 
 *{
@@ -48,6 +52,62 @@ a {
         width: 1170px;
     }
 }
+
+/**Start Component  */
+.section-heading{
+    text-align: center;
+}
+.section-heading h2 {
+
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--header-text-color);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-heading h2::before {
+    content: '';
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    bottom: -24px;
+    left: calc(50% - 50px);
+    background-color: var(--header-text-color);
+}
+
+.section-heading h2::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid var(--header-text-color);
+    bottom: -30px;
+    left: calc(50% - 6px);
+    background-color: white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.section-heading h2 + p {
+    font-size: 16px;
+    color: var(--body-text-color);
+    font-weight: 300;
+    text-align:center;
+    margin: 48px auto 100px;    
+    width: 550px;
+
+}
+
+@media only screen and (max-width: 767px) {
+    .section-heading h2 + p {
+        width: 80%;
+    }
+}
+/**Ending Component */
 
 /** Start Header */
 .header {
@@ -299,4 +359,66 @@ a {
 
 .landing .active {
     background-color: var(--main-color);
+}
+
+/**Landing Ending */
+
+.services {
+    padding: var(--section-padding-top-lg) 0px;
+}
+
+@media only screen and (max-width: 767px) {
+    .services {
+        padding: var(--section-padding-top-sm) 0px;
+    }
+}
+
+.services .services-content {
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    column-gap: 48px;
+    row-gap: 60px;
+    margin-bottom: 52px;
+}
+
+
+
+.services .services-content .service-card {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+@media only screen  and (max-width: 767px) {
+    .services .services-content .service-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .services .services-content .service-card .service-text 
+    {
+        margin-left: 0;
+        margin-top: 24px;
+    }    
+}
+.services .service-card i {
+    color: var(--header-text-color);
+}
+
+.services .service-card .service-text {
+    margin-left: 56px;
+}
+
+.services .service-card .service-text h3 {
+    font-weight: 300;
+    color: var(--main-color);
+}
+
+.services .service-card .service-text p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--body-text-color);
+    margin-top: 24px;
+    line-height: 1.6;
 }
