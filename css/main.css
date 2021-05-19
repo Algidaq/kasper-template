@@ -430,3 +430,97 @@ a {
     margin-top: 24px;
     line-height: 1.6;
 }
+/** End of services */
+
+/** Start of design section */
+.design {
+    background-color: var(--bg-color);
+    padding: var(--section-padding-top-lg) 0;
+    position: relative;
+    height: 600px;
+    background-image: url(../imgs/design-features.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+    .design {
+        padding: var(--section-padding-top-sm) 0;
+    }
+}
+.design::before {
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+}
+.design .image {
+    position: absolute;
+    bottom: -58px;
+    z-index: 2;
+    text-align: center;
+}
+.design .image img {
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 767px)
+{
+    .design .image {
+        display: none;
+    }
+   
+}
+.design .design-content {
+    z-index: 2;
+    position: absolute;
+    background-color: #41c7fc70;
+    width: 50%;
+    padding: 48px;
+    right:0;
+    top: 50%;
+    transform: translateY(-50%);
+    display:flex;
+    justify-content: flex-start;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 767px) {
+    .design .design-content {
+        width: 100%;
+    }
+}
+
+.design .design-content .design-text h3 {
+    font-weight: 300;
+    margin-bottom: 32px;
+    color: white;
+}
+.design .design-content .design-text ul li {
+    padding: 8px 16px;
+    color: white;
+    position:relative;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.design .design-content .design-text ul li::before {
+    font-family: "Font Awesome 5 free";
+    content: "\f108";
+    font-weight: 900;
+    position: absolute;
+    top: 8px;
+    left: -16px;
+    color: white;
+    font-size: 16px;
+}
+/** End of Design section */
