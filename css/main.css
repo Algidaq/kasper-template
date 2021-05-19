@@ -22,7 +22,6 @@ html {
 body {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
     /* background-color: var(--bg-color,black); */
-    overflow-x: hidden;
 }
 .container {
     padding: 0px 16px;
@@ -524,3 +523,181 @@ a {
     font-size: 16px;
 }
 /** End of Design section */
+
+.proto {
+    padding: var(--section-padding-top-lg) 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 767px) {
+    .proto {
+        padding: var(--section-padding-top-sm) 0;
+    }
+}
+.gallary {
+    /* display:flex;
+    align-items: center; */
+}
+.gallary .gallary-header {
+    margin: 0 auto;
+    display: flex;
+    /* width: fit-content; */
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallary .gallary-header li {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 24px;
+    font-size: 14px;
+    font-weight: 300;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+@media only screen and (max-width: 767px) {
+    .gallary .gallary-header li:nth-child(4) {
+    margin-right: 16px;
+    margin-top: 16px;
+    }
+    .gallary .gallary-header li:last-child {
+        margin-right: 16px;
+        margin-top: 16px;
+        }
+}
+.gallary .gallary-header .active,
+.gallary .gallary-header li:hover {
+    background-color: var(--main-color);
+    color: white;
+
+}
+
+.gallary .gallary-container {
+    width: 100%;
+   display:flex;
+   flex-flow: row wrap;
+   align-items: stretch;
+   margin-top: 48px;
+}
+
+.gallary .gallary-container .gallary-card {
+    position: relative;
+    cursor:pointer;
+    overflow: hidden;
+    flex-basis: 100%;
+}
+
+@media only screen and ( min-width: 768px )
+{
+    .gallary .gallary-container .gallary-card {
+        flex-basis: 50%;
+    }
+}
+@media only screen and (min-width: 990px) {
+    .gallary .gallary-container .gallary-card {
+        flex-basis: calc( 100%/3);
+    }
+}
+@media only screen and (min-width: 1199px) {
+    .gallary .gallary-container .gallary-card {
+        flex-basis: calc(100% / 4);
+    }
+}
+
+.gallary .gallary-container .gallary-card  img {
+   object-fit: cover;
+   max-width: 100%;
+   max-height: 100%;
+   transition: 0.3s linear;
+   -webkit-transition: 0.3s linear;
+   -moz-transition: 0.3s linear;
+   -ms-transition: 0.3s linear;
+   -o-transition: 0.3s linear;
+}
+.gallary .gallary-container .gallary-card:hover img {
+    transform: rotate(15deg) scale(1.4);
+    -webkit-transform: rotate(15deg) scale(1.4);
+    -moz-transform: rotate(15deg) scale(1.4);
+    -ms-transform: rotate(15deg) scale(1.4);
+    -o-transform: rotate(15deg) scale(1.4);
+}
+
+.gallary .gallary-container .gallary-card .fab {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: white;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -ms-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+}
+.gallary .gallary-container .gallary-card:hover .fab {
+    opacity: 1;
+}
+.gallary .gallary-container .gallary-card .text {
+    position: absolute;
+    bottom: -82px;
+    left:0;
+    transition: bottom 0.5s ease-out;
+    background-color: white;
+    padding: 4px 16px;
+    width: 100%;
+    -webkit-transition: bottom 0.5s ease-out;
+    -moz-transition: bottom 0.5s ease-out;
+    -ms-transition: bottom 0.5s ease-out;
+    -o-transition: bottom 0.5s ease-out;
+}
+.gallary .gallary-container .gallary-card:hover .text {
+    bottom: 0;
+}
+.gallary .gallary-container .gallary-card .text h3 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.gallary .gallary-container .gallary-card .text p {
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--main-color);
+}
+
+.proto .proto-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+.proto .proto-button a {
+    color: white;
+    background-color: var(--main-color);
+    padding: 12px 24px
+}
