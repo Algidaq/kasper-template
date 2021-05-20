@@ -1070,4 +1070,193 @@ a {
     border: 8px solid;
     border-color: var(--bg-color) transparent transparent;
 
-} 
+}
+/**End of Skills section */
+
+/**Start of qoute section */
+
+.qoute {
+    padding: var(--section-padding-top-lg) 0;
+    position: relative;
+    background-image: url(../imgs/quote.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .qoute {
+        padding: var(--section-padding-top-sm);
+    }
+}
+
+.qoute::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+}
+.qoute .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.qoute q {
+    text-transform: uppercase;
+    font-size: 20px;
+    color:white;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+@media only screen and (max-width: 767px) {
+    .qoute q {
+        font-size: 18px;
+        
+    }
+}
+
+.qoute h3 {
+    margin-top: 24px;
+    font-weight: 300;
+    color: white;
+}
+/**Ending of the qoute section  */
+
+/**Start of Pricing section */
+
+.pricing {
+    padding: var(--section-padding-top-lg) 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .pricing {
+        padding: var(--section-padding-top-sm) 0;
+    }
+}
+.pricing .pricing-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.pricing-content .pricing-card {
+    text-align: center;
+}
+@media (max-width: 767px) {
+    
+.pricing-content .pricing-card {
+    flex-basis: 100%;
+    margin-top: 64px;
+}
+}
+
+@media (min-width: 768px) 
+{
+    .pricing-content .pricing-card {
+        flex-basis: calc( 50% - 32px);
+        margin-top: 64px;
+        }
+}
+
+@media (min-width: 990px )
+{
+    .pricing-content .pricing-card {
+        flex-basis: calc( 25% - 32px);
+        }
+}
+
+.pricing-card .title {
+    padding: 24px 0;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing-card .title p {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    color: var(--bg-color);
+}
+
+.pricing-card .title h2 {
+    font-size: 64px;
+    color: var(--bg-color);
+    font-weight: 400;
+    position: relative;
+}
+
+.pricing-card .title h2::before {
+    content: '$';
+    position: absolute;
+    font-size: 18px;
+    top: 10px;
+    font-weight: 900;
+    left: calc(50% - 64px);
+}
+
+.pricing-card .title h2::after {
+    content: '/mo';
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 12px;
+    bottom: 10px;
+    font-weight: 300;
+    right: calc(50% - 64px);
+}
+
+.pricing-card .features {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.pricing-card .features p {
+    padding: 20px 0;
+    font-weight: 300;
+    color: var(--bg-color);
+    width: fit-content;
+}
+
+.pricing-card .features p:not(:last-child) {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing-card .buy {
+    border-top:  1px solid var(--main-color);
+    padding-top: 48px;
+}
+
+.pricing-card .buy a {
+    border: 1px solid var(--main-color);
+    color: var(--bg-color);
+    padding: 12px 24px;
+    text-transform: uppercase; 
+    display: inline-block;   
+}
+
+.pricing .contact{
+    margin-top: 64px;
+    text-align: center;
+}
+
+.pricing .contact p {
+    color: var(--bg-color);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.pricing .contact a{
+    display: inline-block;
+    margin-top: 32px;
+    padding: 16px 24px;
+    background-color: var(--main-color);
+    color:white;
+    cursor: pointer;
+}
