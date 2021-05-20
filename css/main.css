@@ -257,6 +257,8 @@ a {
 /** Landing Start */
 .landing {
     background-image: url(../imgs/landing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     width: 100%;
 }
