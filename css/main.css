@@ -1211,20 +1211,21 @@ a {
     right: calc(50% - 64px);
 }
 
-.pricing-card .features {
+.pricing-card ul {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
-.pricing-card .features p {
+.pricing-card ul li {
     padding: 20px 0;
     font-weight: 300;
     color: var(--bg-color);
     width: fit-content;
+    
 }
 
-.pricing-card .features p:not(:last-child) {
+.pricing-card ul li:not(:last-child) {
     border-bottom: 1px solid var(--main-color);
 }
 
@@ -1259,4 +1260,104 @@ a {
     background-color: var(--main-color);
     color:white;
     cursor: pointer;
+}
+/**End of section */
+/**Start of subs */
+.subs {
+    background-image: url(../imgs/subscribe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: var(--section-padding-top-lg) 0;
+}
+
+.subs::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.subs .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .subs {
+        padding: var(--section-padding-top-sm) 0;
+    }
+
+    .subs .container {
+        flex-flow: column;
+    }
+}
+.subs form {
+    display: flex;
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+    flex-basis: 75%;
+
+}
+.subs form .prefix-icon {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.subs form input[type="email"]:focus,
+.subs form input[type="submit"]:focus  {
+    outline: none;
+}
+.subs form input[type="email"] {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 16px 16px 16px 60px;
+    border-right: none;
+    width: calc(100% - 130px);
+    color: white;
+    caret-color: var(--main-color);
+}
+
+.subs form input[type="submit"] {
+    width: 130px;
+    padding: 16px 20px;
+    border: 1px solid white;
+    border-left: none;
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
+.subs ::placeholder {
+    color: white; 
+}
+
+.subs p {
+    line-height: 1.8;
+    font-weight: 300;
+    font-size: 14px;
+    color:white;
+    margin-left: 54px;
+}
+@media (max-width: 991px) {
+    .subs p {
+        margin: 30px 0 0;
+        text-align: center;
+    }
+
+    
 }
