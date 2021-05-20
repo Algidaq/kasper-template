@@ -743,6 +743,7 @@ a {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .video .text-container .text h2 {
@@ -769,4 +770,25 @@ a {
     color: white;
     text-transform: uppercase;
     flex-basis: calc(100% / 3);
+}
+/** End of Video Section */
+/** Start of About us section */
+.aboutus {
+    padding-top: var(--section-padding-top-lg);
+    text-align: center;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+    .aboutus {
+        padding-top: var(--section-padding-top-sm);
+    }
+}
+
+.aboutus img {
+    max-width: 100%;
+    object-fit: contain;
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
 }
