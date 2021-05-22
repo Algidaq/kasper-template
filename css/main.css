@@ -24,6 +24,7 @@ body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   /* background-color: var(--bg-color,black); */
 }
+
 .container {
   padding: 0px 16px;
   margin: 0 auto;
@@ -1447,4 +1448,28 @@ a {
   font-weight: 300;
   text-transform: capitalize;
   font-size: 14px;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 12px 16px;
+  padding: 12px;
+  background-color: var(--main-color);
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-align: center;
+}
+
+.scroll-top i {
+  color: white;
+  font-size: 20px;
+  margin: 0 auto;
 }

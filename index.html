@@ -18,7 +18,7 @@
     />
     <title>Kasper-Template</title>
   </head>
-  <body>
+  <body id="body">
     <!--* Start Header -->
     <header class="header">
       <div class="container">
@@ -534,5 +534,19 @@
       </div>
     </section>
     <!--*End of Footer section -->
+    <div class="scroll-top" id="scroll-top">
+      <i class="fas fa-angle-up"></i>
+    </div>
+    <script>
+      let scrollTopButton = document.getElementById("scroll-top");
+      let html = document.getElementsByTagName("body");
+      window.addEventListener("scroll", (scrollY) => {
+        let y = window.scrollY;
+        scrollTopButton.style.display = y > 500 ? "block" : "none";
+      });
+      scrollTopButton.onclick = () => {
+        window.scrollTo(0, 0);
+      };
+    </script>
   </body>
 </html>
